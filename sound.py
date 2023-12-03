@@ -2,16 +2,16 @@ from importings import *
 
 def hello():
     pygame.init()
-    sound = pygame.mixer.Sound("звук/привіт!.mp3")
+    sound = pygame.mixer.Sound("D:\\Python\\Voice_Bot_new\\звук\\привіт!.mp3")
     sound.play()
-    duration_seconds = 3
+    duration_seconds = 2
     duration_milliseconds = duration_seconds * 1000
     pygame.time.wait(duration_milliseconds)
     pygame.quit()
 
 def open():
     pygame.init()
-    sound = pygame.mixer.Sound("звук/окей_вмикаю.mp3")
+    sound = pygame.mixer.Sound("D:\\Python\\Voice_Bot_new\\звук\\окей_вмикаю.mp3")
     sound.play()
     duration_seconds = 3
     duration_milliseconds = duration_seconds * 1000
@@ -20,7 +20,7 @@ def open():
 
 def see_you():
     pygame.init()
-    sound = pygame.mixer.Sound("звук/хай_щастить!.mp3")
+    sound = pygame.mixer.Sound("D:\\Python\\Voice_Bot_new\\звук\\хай_щастить!.mp3")
     sound.play()
     duration_seconds = 3
     duration_milliseconds = duration_seconds * 1000
@@ -38,7 +38,7 @@ def music(adres):
 
 def dontUnderstedebl():
     pygame.init()
-    sound = pygame.mixer.Sound("звук/не_зрозумів.mp3")
+    sound = pygame.mixer.Sound("D:\\Python\\Voice_Bot_new\\звук\\не_зрозумів.mp3")
     sound.play()
     duration_seconds = 5
     duration_milliseconds = duration_seconds * 1000
@@ -47,7 +47,7 @@ def dontUnderstedebl():
 
 def EnterPassword():
     pygame.init()
-    sound = pygame.mixer.Sound("звук/для_користування_програмою_нада_пароль.mp3")
+    sound = pygame.mixer.Sound("D:\\Python\\Voice_Bot_new\\звук\\для_користування_програмою_нада_пароль.mp3")
     sound.play()
     duration_seconds = 5
     duration_milliseconds = duration_seconds * 1000
@@ -56,9 +56,9 @@ def EnterPassword():
 
 def IlistenYou():
     pygame.init()
-    sound = pygame.mixer.Sound("звук/я-вас-слухаю.mp3")
+    sound = pygame.mixer.Sound("D:\\Python\\Voice_Bot_new\\звук\\я-вас-слухаю.mp3")
     sound.play()
-    duration_seconds = 5
+    duration_seconds = 2
     duration_milliseconds = duration_seconds * 1000
     pygame.time.wait(duration_milliseconds)
     pygame.quit()
@@ -74,7 +74,7 @@ def IlistenYou():
 
 def InvalidPassword():
     pygame.init()
-    sound = pygame.mixer.Sound("звук/пароль-не-правильний.mp3")
+    sound = pygame.mixer.Sound("D:\\Python\\Voice_Bot_new\\звук\\пароль-не-правильний.mp3")
     sound.play()
     duration_seconds = 5
     duration_milliseconds = duration_seconds * 1000
@@ -83,9 +83,9 @@ def InvalidPassword():
 
 def UnknownComand():
     pygame.init()
-    sound = pygame.mixer.Sound("звук/не-знаю-команду.mp3")
+    sound = pygame.mixer.Sound("D:\\Python\\Voice_Bot_new\\звук\\не-знаю-команду.mp3")
     sound.play()
-    duration_seconds = 5
+    duration_seconds = 3
     duration_milliseconds = duration_seconds * 1000
     pygame.time.wait(duration_milliseconds)
     pygame.quit()

@@ -1,6 +1,6 @@
 import os
 import sqlite3
-
+import keyboard
 from importings import *
 
 #
@@ -36,7 +36,7 @@ def search_query(query):
 
 
 
-conn=sqlite3.connect('DataBase_V/test.db')
+conn=sqlite3.connect('D:\\Python\\Voice_Bot_new\\DataBase_V\\test.db')
 
 
 def open_item_on_desktop(item_name):
@@ -112,3 +112,74 @@ def open_item_on_desktop(item_name):
                         except Exception as e:
                             print(f"Помилка відкриття {item_name}: {e}")
         print(f"{item_name} не знайдено на робочому столі або в директоріях C або D.")
+
+
+
+import sys
+import speech_recognition as sr
+
+def dont_listen():
+    recognizer = sr.Recognizer()
+    gtp = ['проснись', 'Проснись', 'прокинься', 'Прокинься', 'повернувся', 'Повернувся',
+           'вернувся','Вернувся','очнись','Очнись',]
+
+    with sr.Microphone() as source:
+        print("Скажіть що-небудь...")
+        audio = recognizer.listen(source)
+
+    try:
+        text = recognizer.recognize_google(audio, language="uk-UA")
+        print(f"Розпізнанний текст: {text}")
+
+        for i in gtp:
+            if i in text:
+                print('всьо')
+                break
+        else:
+            print("повтор1")
+            dont_listen()  # Рекурсивний виклик, якщо жодного ключового слова не виявлено
+
+    except Exception as e:
+        print(f"Помилка: {e}")
+        print("повтор2")
+        dont_listen()
+
+
+def res_wkl():
+    keyboard.press_and_release('ctrl+shift+t')
+
+def close_wkl():
+    keyboard.press_and_release('ctrl+w')
+
+def open_wkl():
+    keyboard.press_and_release('ctrl+t')
+
+def close():
+    keyboard.press_and_release('alt+f4')
+
+def zverni():
+    keyboard.press_and_release('win+d')
+
+
+
+
+# def open_folder(folder_path):
+#     try:
+#         # Відкрити папку за допомогою системного застосунку за замовчуванням
+#         os.startfile(folder_path)  # Цей метод працює тільки на Windows
+#
+#         # Якщо ви використовуєте macOS, ви можете скористатися:
+#         # os.system('open "{}"'.format(folder_path))
+#
+#         # Якщо ви використовуєте Linux, ви можете скористатися:
+#         # os.system('xdg-open "{}"'.format(folder_path))
+#
+#         print(f"Папка {folder_path} відкрита успішно.")
+#     except Exception as e:
+#         print(f"Сталася помилка: {e}")
+#
+# # Задайте шлях до папки, яку ви хочете відкрити
+# folder_path = r'C:\\Users\\Denis\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'  # Замініть це на шлях до вашої папки
+#
+# # Викликати функцію для відкриття папки
+# open_folder(folder_path)
