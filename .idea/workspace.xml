@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23714d1a-c0b7-4541-b744-b164ae64e9be" name="Changes" comment="не працюючий код">
+    <list default="true" id="23714d1a-c0b7-4541-b744-b164ae64e9be" name="Changes" comment="iou">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importings.py" beforeDir="false" afterPath="$PROJECT_DIR$/importings.py" afterDir="false" />
@@ -122,6 +122,7 @@
     <MESSAGE value="mus and data" />
     <MESSAGE value="all" />
     <MESSAGE value="не працюючий код" />
-    <option name="LAST_COMMIT_MESSAGE" value="не працюючий код" />
+    <MESSAGE value="iou" />
+    <option name="LAST_COMMIT_MESSAGE" value="iou" />
   </component>
 </project>
