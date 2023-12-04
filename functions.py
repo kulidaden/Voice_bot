@@ -1,44 +1,19 @@
+import datetime
 import os
 import sqlite3
 import keyboard
+import pyautogui
 from importings import *
-
-#
-# def open_program_in_directories(program_name, directories=["E:\\", "D:\\", "C:\\", os.path.expanduser("~")]):
-#     # Лічильник перевірених файлів
-#     checked_files = 0
-#
-#     for directory in directories:
-#         print(f"\nПеревірка директорії: {directory}")
-#
-#         for root, dirs, files in os.walk(directory):
-#             # print(f"Шлях: {root}")
-#             # print(f"Файли: {files}")
-#
-#             if program_name in files:
-#                 program_path = os.path.join(root, program_name)
-#                 try:
-#                     subprocess.Popen([program_path])
-#                     checked_files += 1
-#                     print(
-#                         f"Запущено програму '{program_name}' за шляхом: {program_path} ({checked_files} файлів перевірено)")
-#                     # Тут ви можете використовувати program_path, якщо потрібно зробити щось з шляхом
-#                     return  # Зупинити пошук після знаходження програми
-#                 except Exception as e:
-#                     print(f"Помилка: {e}")
-#
-#     if checked_files == 0:
-#         print(f"Програма '{program_name}' не знайдена в жодній директорії. ({checked_files} файлів перевірено)")
 
 def search_query(query):
     url = f"https://www.google.com/search?q={query}"
     webbrowser.open(url)
 
 
-
+#підключення до БД
 conn=sqlite3.connect('D:\\Python\\Voice_Bot_new\\DataBase_V\\test.db')
 
-
+#для пошуку у ПК
 def open_item_on_desktop(item_name):
     item_name=item_name.title()
     cursor = conn.cursor()
@@ -113,11 +88,7 @@ def open_item_on_desktop(item_name):
                             print(f"Помилка відкриття {item_name}: {e}")
         print(f"{item_name} не знайдено на робочому столі або в директоріях C або D.")
 
-
-
-import sys
-import speech_recognition as sr
-
+#сплячий режим
 def dont_listen():
     recognizer = sr.Recognizer()
     gtp = ['проснись', 'Проснись', 'прокинься', 'Прокинься', 'повернувся', 'Повернувся',
@@ -144,21 +115,60 @@ def dont_listen():
         print("повтор2")
         dont_listen()
 
-
+#повертає вкладку
 def res_wkl():
     keyboard.press_and_release('ctrl+shift+t')
-
+#закриває вкладку
 def close_wkl():
     keyboard.press_and_release('ctrl+w')
-
+#відкриває нову вкладку
 def open_wkl():
     keyboard.press_and_release('ctrl+t')
-
+#закриває поточну програму
 def close():
     keyboard.press_and_release('alt+f4')
-
+#звертає поточну програму
 def zverni():
     keyboard.press_and_release('win+d')
+
+#запис відео
+def scr_videos():
+    keyboard.press_and_release('win+alt+r')
+
+#вкл\викл мікро
+def micro():
+    keyboard.press_and_release('win+alt+r')
+
+#робить скрін
+def screen():
+    times=datetime.now().strftime("%Y%m%d%H%M%S")
+    name_file=f'знімок_{times}.png'
+    scr=pyautogui.screenshot()
+    scr=scr.save(f'screenshots/{name_file}')
+
+#вимокає/вмикає звук
+mute_state = False
+def valume_on_off():
+    global mute_state
+
+    devices = AudioUtilities.GetSpeakers()
+    interface = devices.Activate(
+        IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+    volume = cast(interface, POINTER(IAudioEndpointVolume))
+
+    # Зміна стану вимкнення/ввімкнення звуку
+    mute_state = not mute_state
+
+    # Встановлення стану вимкнення/ввімкнення звуку
+    volume.SetMute(mute_state, None)
+
+
+
+
+
+
+
+
 
 
 
