@@ -5,13 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23714d1a-c0b7-4541-b744-b164ae64e9be" name="Changes" comment="iou">
+      <change afterPath="$PROJECT_DIR$/screenshots/знімок_20231210185211.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataBase_V/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/DataBase_V/test.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importings.py" beforeDir="false" afterPath="$PROJECT_DIR$/importings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osnova.py" beforeDir="false" afterPath="$PROJECT_DIR$/osnova.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/slowars.py" beforeDir="false" afterPath="$PROJECT_DIR$/slowars.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sound.py" beforeDir="false" afterPath="$PROJECT_DIR$/sound.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webbrowsers.py" beforeDir="false" afterPath="$PROJECT_DIR$/webbrowsers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/звук/для_користування_програмою_нада_пароль.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/звук/не-знаю-команду.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/звук/не_зрозумів.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/звук/окей_вмикаю.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/звук/пароль-не-правильний.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/звук/персонажі.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/звук/привіт!.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/звук/спів.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/звук/хай_щастить!.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/звук/я-вас-слухаю.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/звук/який-пароль-встановити.mp3" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701641718732</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="iou">
+      <created>1701715496681</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701715496681</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

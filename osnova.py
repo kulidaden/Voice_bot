@@ -19,6 +19,7 @@ def mu():
                 while True:
                     # IlistenYou()
                     def voice():
+
                         global result1
                         global search_results
                         with sr.Microphone() as source:
@@ -51,28 +52,14 @@ def mu():
                                     result1=result1
                                     print(result1)
                                     voice()
-
-
-                            for command in search_google_0:
-                                if command in text:
-                                    print(result1)
-                                    print(search_results)
-                                    webbrowser.open(search_results[search_google_0[command]])
-
-                            # для пошуку у ПК
-                            for command in comp_slowar:
-                                if command in text:
-                                    open()
-                                    result = text.replace(command, '')
-                                    result=result.title()
-                                    result=result.strip()
-                                    print(result)
-                                    open_item_on_desktop(result)
-                                    voice()
                             #скріншот
                             for command in screenshot:
                                 if command in text:
                                     screen()
+                                    voice()
+                            for command in command_slowar:
+                                if command in text:
+                                    open_command_slowar("command")
                                     voice()
                             #чат ГПТ
                             for command in znach:
@@ -121,22 +108,24 @@ def mu():
                                 if command in text:
                                     micro()
                                     voice()
-
-                            for command in open_first_site:
+                            for command in up:
                                 if command in text:
-
-                                    openFirstSite()
+                                    upi()
                                     voice()
-
-
-
-                            #це для готових команд
-                            # for word in text.split():
-                            #     if word in slowar:
-                            #         open()
-                            #         slowar[word][0](slowar[word][1])
-                            #         flag = 1
-                            #         voice()
+                            for command in down:
+                                if command in text:
+                                    downi()
+                                    voice()
+                            # для пошуку у ПК
+                            for command in comp_slowar:
+                                if command in text:
+                                    open()
+                                    result = text.replace(command, '')
+                                    result=result.title()
+                                    result=result.strip()
+                                    print(result)
+                                    open_item_on_desktop(result)
+                                    voice()
                             if "Припини роботу" in text:
                                 flag = 2
                                 see_you()

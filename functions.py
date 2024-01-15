@@ -1,8 +1,9 @@
-import datetime
-import os
-import sqlite3
-import keyboard
-import pyautogui
+# import datetime
+# import os
+# import sqlite3
+# import time
+# import keyboard
+# import pyautogui
 from importings import *
 
 def search_query(query):
@@ -91,7 +92,7 @@ def open_item_on_desktop(item_name):
 #сплячий режим
 def dont_listen():
     recognizer = sr.Recognizer()
-    gtp = ['проснись', 'Проснись', 'прокинься', 'Прокинься', 'повернувся', 'Повернувся',
+    sl_for_get_up = ['проснись', 'Проснись', 'прокинься', 'Прокинься', 'повернувся', 'Повернувся',
            'вернувся','Вернувся','очнись','Очнись',]
 
     with sr.Microphone() as source:
@@ -102,7 +103,7 @@ def dont_listen():
         text = recognizer.recognize_google(audio, language="uk-UA")
         print(f"Розпізнанний текст: {text}")
 
-        for i in gtp:
+        for i in sl_for_get_up:
             if i in text:
                 print('всьо')
                 break
@@ -137,14 +138,17 @@ def scr_videos():
 
 #вкл\викл мікро
 def micro():
-    keyboard.press_and_release('win+alt+r')
+    keyboard.press_and_release('win+alt+m')
 
 #робить скрін
+# def screen():
+#     times=datetime.now().strftime("%Y%m%d%H%M%S")
+#     name_file=f'знімок_{times}.png'
+#     scr=pyautogui.screenshot()
+#     scr.save(f'screenshots/{name_file}')
+
 def screen():
-    times=datetime.now().strftime("%Y%m%d%H%M%S")
-    name_file=f'знімок_{times}.png'
-    scr=pyautogui.screenshot()
-    scr=scr.save(f'screenshots/{name_file}')
+    keyboard.press_and_release('print screen')
 
 #вимокає/вмикає звук
 mute_state = False
@@ -162,6 +166,25 @@ def valume_on_off():
     # Встановлення стану вимкнення/ввімкнення звуку
     volume.SetMute(mute_state, None)
 
+def read_list_from_file(file_path):
+    result_list = []
+    with open(file_path, 'r', encoding='utf-8') as file:
+        for line in file:
+            result_list.append(line.strip())
+    return result_list
+
+
+def open_command_slowar(file):
+    try:
+        os.startfile(file)
+    except Exception as e:
+        print(f"Сталася помилка: {e}")
+
+def upi():
+    pyautogui.scroll(500)
+
+def downi():
+    pyautogui.scroll(-500)
 
 
 
@@ -173,6 +196,18 @@ def valume_on_off():
 
 
 
+
+
+
+
+
+
+
+
+
+
+#
+#
 # def open_folder(folder_path):
 #     try:
 #         # Відкрити папку за допомогою системного застосунку за замовчуванням
